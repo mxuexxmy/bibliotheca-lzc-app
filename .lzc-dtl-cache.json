@@ -1,0 +1,30 @@
+{
+  "name": "Bibliotheca",
+  "package": "xyz.mxue.bibliotheca",
+  "description": "Bibliotheca是一个自托管的个人图书馆和阅读跟踪器Web应用程序,由Flask构建。 它可以让你记录,组织和可视化你的阅读旅程。 通过 ISBN 添加书籍,跟踪阅读进度,记录每日阅读,并生成您完成的标题的每月总结图像。",
+  "homepage": "https://github.com/pickles4evaaaa/bibliotheca",
+  "author": "pickles4evaaaa",
+  "app_features": [],
+  "subdomain": "bibliotheca",
+  "version": "0.0.1",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "bibliotheca_5053_5054": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_pickles4evaaaa_bibliotheca_latest": {
+    "originalImage": "pickles4evaaaa/bibliotheca:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/pickles4evaaaa/bibliotheca:9feb8cbab1180a11",
+    "timestamp": "2025-06-16T11:23:14.549Z"
+  },
+  "bibliotheca_volume_bibliotheca_data_/app/data_action": "emptyDir",
+  "bibliotheca_volume_/app/data_location": "app_data"
+}

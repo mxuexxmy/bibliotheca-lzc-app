@@ -1,0 +1,22 @@
+lzc-sdk-version: "0.1"
+name: Bibliotheca
+package: xyz.mxue.bibliotheca
+version: 0.0.1
+description: Bibliotheca是一个自托管的个人图书馆和阅读跟踪器Web应用程序,由Flask构建。
+  它可以让你记录,组织和可视化你的阅读旅程。 通过 ISBN 添加书籍,跟踪阅读进度,记录每日阅读,并生成您完成的标题的每月总结图像。
+homepage: https://github.com/pickles4evaaaa/bibliotheca
+author: pickles4evaaaa
+application:
+  subdomain: bibliotheca
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://bibliotheca.xyz.mxue.bibliotheca.lzcapp:5054/
+services:
+  bibliotheca:
+    image: registry.lazycat.cloud/mxuexxmy/pickles4evaaaa/bibliotheca:9feb8cbab1180a11
+    binds:
+      - /lzcapp/var/data:/app/data
